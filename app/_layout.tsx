@@ -31,6 +31,11 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
 
+  /**
+   * Renders the app's root navigation layout.
+   *
+   * @returns The root navigation Stack element used as the app layout.
+   */
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>
