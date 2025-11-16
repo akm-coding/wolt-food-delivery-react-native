@@ -17,6 +17,11 @@ const queryClient = new QueryClient({
   },
 });
 
+/**
+ * Provides the app's root navigation layout.
+ *
+ * @returns The root navigation Stack element used as the app layout.
+ */
 export default function RootLayout() {
   let [fontsLoaded] = useFonts({
     Nunito_400Regular,
@@ -26,6 +31,11 @@ export default function RootLayout() {
 
   if (!fontsLoaded) return null;
 
+  /**
+   * Renders the app's root navigation layout.
+   *
+   * @returns The root navigation Stack element used as the app layout.
+   */
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <QueryClientProvider client={queryClient}>
